@@ -1629,7 +1629,7 @@
                             /*WISHES*/
                             var aboutwish = document.getElementById("wishabout").innerHTML.split(',');
 
-                            if (aboutwish.length > 0 && document.getElementById("wishabout").innerHTML!=="") {
+                            if (aboutwish.length > 0 && document.getElementById("wishabout").innerHTML.trim()!=="") {
 
                                 var xyz = document.getElementById("wishes");
 
@@ -1796,7 +1796,7 @@
                             var guard1passport = document.getElementById("guard1passport").innerHTML;
                        
 
-                            if (guard1name.length > 0 && guard1name.trim()!=='null') {
+                            if (guard1name.length > 0 && document.getElementById("guard1name").innerHTML.trim()!=='') {
 
                                 var xyz = document.getElementById("guard1");
 
