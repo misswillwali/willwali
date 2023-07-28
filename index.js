@@ -17,6 +17,7 @@ const { Console } = require("console");
 //console.log(path.join(__dirname, './', "template.ejs"));
 app.post("/generateReport", (req, res) => {
    console.log(req.body);
+   console.log(typeof(req.body.guard1.name));
     let details=[{name:req.body.name,
         passport:req.body.passport,
         nationality:req.body.nationality,
