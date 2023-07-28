@@ -804,10 +804,67 @@
                             <%=charity.charity%></div>
 
                         <div id="charity"></div>
-                        <div id="guard1name" style="display:none">
+                        <% if(guard.guard1.name==='null'){ %>
+                                    <div id="guard1name" style="display:none">
+                            <%=""%>
+                        </div>
+                                 <% } else{ %>  
+                                   <div id="guard1name" style="display:none">
                             <%=guard.guard1.name%>
                         </div>
-                        <div id="guard1relation" style="display:none">
+                                <% } %>
+                                <!-- <div id="guard1name" style="display:none">
+                                    <%=guard.guard1.name%>
+                                </div> -->
+        
+                                <% if(guard.guard1.relation==='null'){ %>
+                                    <div id="guard1relation" style="display:none">
+                            <%=""%>
+                        </div>
+                                 <% } else{ %>  
+                                   <div id="guard1relation" style="display:none">
+                            <%=guard.guard1.relation%>
+                        </div>
+                                <% } %>
+                                <% if(guard.guard1.contactno==='null'){ %>
+                                    <div id="guard1no" style="display:none">
+                            <%=""%>
+                        </div>
+                                 <% } else{ %>  
+                                   <div id="guard1no" style="display:none">
+                            <%=guard.guard1.contactno%>
+                        </div>
+                                <% } %>
+
+                                <% if(guard.guard1.email==='null'){ %>
+                                    <div id="guard1email" style="display:none">
+                            <%=""%>
+                        </div>
+                                 <% } else{ %>  
+                                   <div id="guard1email" style="display:none">
+                            <%=guard.guard1.email%>
+                        </div>
+                                <% } %>
+                                <% if(guard.guard1.address==='null'){ %>
+                                    <div id="guard1address" style="display:none">
+                            <%=""%>
+                        </div>
+                                 <% } else{ %>  
+                                   <div id="guard1address" style="display:none">
+                            <%=guard.guard1.address%>
+                        </div>
+                                <% } %>
+                                <% if(guard.guard1.passport==='null'){ %>
+                                    <div id="guard1passport" style="display:none">
+                            <%=""%>
+                        </div>
+                                 <% } else{ %>  
+                                   <div id="guard1passport" style="display:none">
+                            <%=guard.guard1.passport%>
+                        </div>
+                                <% } %>
+                                
+                        <!-- <div id="guard1relation" style="display:none">
                             <%=guard.guard1.relation%>
                         </div>
                         <div id="guard1no" style="display:none">
@@ -821,7 +878,7 @@
                         </div>
                         <div id="guard1passport" style="display:none">
                             <%=guard.guard1.passport%>
-                        </div>
+                        </div> -->
                         
 
                         <div id="guard1"></div>
@@ -1796,7 +1853,7 @@
                             var guard1passport = document.getElementById("guard1passport").innerHTML;
                        
 
-                            if (guard1name.length>0 && guard1name!=undefined) {
+                            if (document.getElementById("guard1name").innerHTML.trim()!=="") {
 
                                 var xyz = document.getElementById("guard1");
 
@@ -1993,10 +2050,11 @@
 
 
                         </script>
-                        <div class="pagebreak"> </div>
+                        
 
 
                     </div>
+                    <div class="pagebreak"> </div>
 
                     <div class="fcontainer1">
                         <div class="f1item1">
