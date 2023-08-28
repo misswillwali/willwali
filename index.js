@@ -126,6 +126,8 @@ let guardian={guard1:{name:req.body.guard1.name,
   });
     const [page] = await browser.pages();
     await page.goto('about:blank');
+    await page.waitForSelector('body'); // Wait for a specific selector to ensure page is fully loaded
+
     //html_footer = `<div style='width:100%;text-align:right'><span style='font-size:10px;margin-right:20px'>Page <span class='pageNumber'></span> of <span class='totalPages'></span>.</span></div>`;
     const html = await ejs.renderFile("template.ejs", {details:details[0],exe:details[1],bank:bank,property:property,invest:invest,ppf:ppf,vehicle:vehicle,ins:ins,gift:gift,wish:wish,charity:charity,guard:guardian});
     await page.setContent(html);
