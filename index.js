@@ -121,7 +121,7 @@ let guardian={guard1:{name:req.body.guard1.name,
    // console.log(wish);
     let browser;
   (async () => {
-      const browser = await puppeteer.launch({executablePath: '/path/to/chromium',
+      const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disabled-setupid-sandbox"],
   });
     const [page] = await browser.pages();
