@@ -921,7 +921,9 @@
                             var bankcount = document.getElementById("bankcount").innerHTML.split(',');
                             var bankshare = document.getElementById("bankshare").innerHTML.split(',');
                             var bankcontact = document.getElementById("bankcontact").innerHTML.split(',');
-
+                            if(bankcontact == undefined){
+                                bankcontact==" "
+                                }
                             if (bankname.length > 0 && document.getElementById("yy").innerHTML.trim()!=="") {
                                 //num=num+1;
                                 var xyz = document.getElementById("bank");
