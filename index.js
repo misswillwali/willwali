@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
 const bodyParser = require("body-parser");
 // app.use(bodyParser.urlencoded({
 //     extended:true
-// }));
+// }));a
 app.use(bodyParser.json());
 const PORT = process.env.PORT || 5000;
 require('dotenv').config();
